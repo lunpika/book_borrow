@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+    
+    <RelativeLayout 
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#DAE4E5"
+        >
+        
+        <circleimageview.CircleImageView
+    		xmlns:app="http://schemas.android.com/apk/res-auto"
+    		android:id="@+id/circleImageView"
+    		android:layout_width="100dp"
+    		android:layout_height="100dp"
+    		android:layout_marginLeft="30dp"
+    		android:layout_centerVertical="true"
+    		android:src="@drawable/ic_test"
+    		app:border_width="2dp"
+    		app:border_color="#ccc"
+    		 />
+
+        <Button
+            android:id="@+id/btn_upload_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/circleImageView"
+            android:text="上传图片"
+            android:padding="7dp"
+            android:background="@drawable/btn_bg_title" />
+
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head"
+        android:orientation="vertical">
+        
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        
+        <RelativeLayout 
+            android:id="@+id/new_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+    		android:layout_marginLeft="5dp"
+    		android:paddingBottom="5dp"
+    		android:paddingTop="5dp"
+    		android:paddingRight="5dp"
+            android:background="@drawable/underline">
+            
+            <TextView 
+                android:id="@+id/tv_new_username"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="新的用户名"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="10dp"/>
+            
+            <EditText
+                android:id="@+id/et_new_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_new_username"/>
+            
+        </RelativeLayout>
+        
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        
+        <RelativeLayout 
+            android:id="@+id/new_signature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+    		android:layout_marginLeft="5dp"
+    		android:paddingBottom="5dp"
+    		android:paddingTop="5dp"
+    		android:paddingRight="5dp"
+            android:background="@drawable/underline"
+            >
+            
+            <TextView 
+                android:id="@+id/tv_new_signature"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="新的签名"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingLeft="17dp"
+                android:paddingBottom="10dp"
+    			android:paddingTop="10dp"
+    			android:paddingRight="10dp"/>
+            
+            <EditText
+                android:id="@+id/et_new_signature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_new_signature"/>
+            
+        </RelativeLayout>
+        
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        
+        <RelativeLayout 
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <ImageView 
+                android:id="@+id/blank"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"/>
+            
+            <Button 
+                android:id="@+id/btn_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textSize="30sp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+    			android:paddingTop="5dp"
+    			android:paddingRight="10dp"
+                android:background="@drawable/btn_bg_confirm"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/blank"/>
+            
+            <Button 
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textSize="30sp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+    			android:paddingTop="5dp"
+    			android:paddingRight="10dp"
+                android:background="@drawable/btn_bg_confirm"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/blank"/>
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>
